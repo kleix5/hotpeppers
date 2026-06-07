@@ -1,1 +1,570 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Криштиану Роналду | Путь по клубам</title>
+    <!-- Шрифты Google Fonts для современного вида -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(145deg, #f5f7fc 0%, #eef2f8 100%);
+            color: #1e2a3e;
+            line-height: 1.4;
+        }
+
+        /* главный контейнер */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        /* hero секция с портретом и названием */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 3.5rem;
+            background: rgba(255,255,255,0.6);
+            backdrop-filter: blur(4px);
+            border-radius: 2.5rem;
+            padding: 1.8rem 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255,255,255,0.7);
+        }
+
+        .hero-text {
+            flex: 2;
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1f2b3a, #2c3e50);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-text .sub {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #2c3e50;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin: 0.75rem 0 1.2rem;
+        }
+
+        .hero-text .quote {
+            font-style: italic;
+            color: #4a627a;
+            font-weight: 400;
+            max-width: 90%;
+            background: #ffffffc9;
+            padding: 0.8rem 1.2rem;
+            border-radius: 1.5rem;
+            backdrop-filter: blur(2px);
+        }
+
+        .hero-img {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-img img {
+            max-width: 220px;
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            border: 3px solid white;
+        }
+
+        .hero-img img:hover {
+            transform: scale(1.02);
+        }
+
+        /* таймлайн стиль */
+        .timeline {
+            margin: 3rem 0 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 3px solid #e67e22;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+
+        .section-title i {
+            color: #e67e22;
+            font-size: 1.8rem;
+        }
+
+        .club-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+        }
+
+        /* карточка клуба */
+        .club-card {
+            background: white;
+            border-radius: 2rem;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+            transition: all 0.25s ease;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .club-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
+        }
+
+        .card-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem 1.8rem;
+            background: #fafcff;
+            border-bottom: 1px solid #edf2f7;
+        }
+
+        .club-badge {
+            width: 60px;
+            height: 60px;
+            background: #f1f5f9;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+
+        .club-name {
+            flex: 2;
+        }
+
+        .club-name h2 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+
+        .club-period {
+            background: #eef2ff;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #1e40af;
+        }
+
+        .card-body {
+            padding: 1.5rem 1.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+        }
+
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            flex: 2;
+        }
+
+        .stat-item {
+            background: #f8fafc;
+            border-radius: 1.2rem;
+            padding: 0.6rem 1.2rem;
+            min-width: 120px;
+            text-align: center;
+            box-shadow: inset 0 0 0 1px rgba(0,0,0,0.02), 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #e67e22;
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            color: #5b6e8c;
+        }
+
+        .achievements {
+            flex: 2;
+            background: #fef9f0;
+            border-radius: 1.2rem;
+            padding: 0.8rem 1.2rem;
+        }
+
+        .achievements p {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #b45309;
+        }
+
+        .achievements ul {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .achievements li {
+            background: white;
+            padding: 0.2rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .achievements li i {
+            color: #f59e0b;
+            font-size: 0.7rem;
+        }
+
+        /* дополнительная секция достижений */
+        .honors-section {
+            margin-top: 3rem;
+            background: linear-gradient(120deg, #fff9f0, #ffffff);
+            border-radius: 2rem;
+            padding: 1.8rem 2rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border: 1px solid #ffe6c7;
+        }
+
+        .honors-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .honors-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            justify-content: space-between;
+        }
+
+        .honor-category {
+            flex: 1;
+            min-width: 160px;
+            background: #fef6e8;
+            border-radius: 1.2rem;
+            padding: 1rem;
+        }
+
+        .honor-category h4 {
+            font-size: 1rem;
+            border-left: 3px solid #e67e22;
+            padding-left: 8px;
+            margin-bottom: 0.8rem;
+        }
+
+        .honor-category p {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #2c3e50;
+        }
+
+        footer {
+            margin-top: 3.5rem;
+            text-align: center;
+            border-top: 1px solid #dce5ef;
+            padding-top: 2rem;
+            font-size: 0.85rem;
+            color: #5e738c;
+        }
+
+        @media (max-width: 750px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text .quote {
+                max-width: 100%;
+            }
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .card-body {
+                flex-direction: column;
+            }
+            .stats {
+                justify-content: space-between;
+            }
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="hero">
+        <div class="hero-text">
+            <h1><i class="fas fa-futbol" style="color:#e67e22;"></i> Криштиану Роналду</h1>
+            <div class="sub">Легендарная карьера • Путь сквозь клубы и эпохи</div>
+            <div class="quote">
+                <i class="fas fa-quote-left" style="margin-right: 6px; opacity:0.6;"></i> 
+                Я не гонюсь за рекордами, рекорды гонятся за мной. <br>
+                За каждым клубом — история, трофеи и феноменальная статистика.
+            </div>
+        </div>
+        <div class="hero-img">
+            <!-- Прямое изображение CR7 (официальное фото в открытом доступе) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/640px-Cristiano_Ronaldo_2018.jpg" 
+                 alt="Криштиану Роналду" 
+                 onerror="this.src='https://via.placeholder.com/220x280?text=CR7'">
+        </div>
+    </div>
+
+    <div class="timeline">
+        <div class="section-title">
+            <i class="fas fa-history"></i> Клубная хронология
+        </div>
+        <div class="club-grid" id="clubsContainer"></div>
+    </div>
+
+    <!-- секция главных достижений / рекорды -->
+    <div class="honors-section">
+        <div class="honors-title">
+            <i class="fas fa-trophy" style="color:#e67e22;"></i> 
+            Вершины & Достижения
+        </div>
+        <div class="honors-grid">
+            <div class="honor-category">
+                <h4><i class="fas fa-futbol"></i> Золотые мячи</h4>
+                <p>5× Ballon d'Or (2008, 2013, 2014, 2016, 2017)</p>
+            </div>
+            <div class="honor-category">
+                <h4><i class="fas fa-champions"></i> Лига чемпионов УЕФА</h4>
+                <p>5 титулов (МЮ 2008, Реал 2014, 2016, 2017, 2018)</p>
+            </div>
+            <div class="honor-category">
+                <h4><i class="fas fa-medal"></i> Золотая бутса</h4>
+                <p>4× (2008, 2011, 2014, 2015)</p>
+            </div>
+            <div class="honor-category">
+                <h4><i class="fas fa-flag-checkered"></i> Сборная Португалии</h4>
+                <p>Евро-2016, Лига наций 2019 <br> Лучший бомбардир в истории</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <i class="fas fa-globe-europe"></i> Криштиану Роналду душ Сантуш Авейру — футбольное наследие, которое изменило мир. 
+        Данные отражают официальную клубную карьеру (2002–н.в.) включая все этапы.
+    </footer>
+</div>
+
+<script>
+    // Полные и проверенные данные о клубах Роналду за всю карьеру
+    const clubsData = [
+        {
+            name: "Спортинг Лиссабон",
+            period: "2002 – 2003",
+            badgeIcon: "⚽",
+            apps: "31",
+            goals: "5",
+            assists: "6",
+            achievements: ["Дебют в основе", "Привлёк скаутов МЮ", "Суперталант поколения"]
+        },
+        {
+            name: "Манчестер Юнайтед",
+            period: "2003 – 2009",
+            badgeIcon: "🔴",
+            apps: "292",
+            goals: "118",
+            assists: "69",
+            achievements: ["3× Премьер-лига", "Лига чемпионов 2008", "Золотой мяч 2008", "Клубный ЧМ"]
+        },
+        {
+            name: "Реал Мадрид",
+            period: "2009 – 2018",
+            badgeIcon: "👑",
+            apps: "438",
+            goals: "450",
+            assists: "131",
+            achievements: ["4× Лига чемпионов", "2× Ла Лига", "2× Золотой мяч", "Лучший бомбардир клуба"]
+        },
+        {
+            name: "Ювентус",
+            period: "2018 – 2021",
+            badgeIcon: "⚪⚫",
+            apps: "134",
+            goals: "101",
+            assists: "22",
+            achievements: ["2× Серия А", "2× Суперкубок Италии", "Кубок Италии", "MVP сезона"]
+        },
+        {
+            name: "Манчестер Юнайтед (возвращение)",
+            period: "2021 – 2022",
+            badgeIcon: "🔴",
+            apps: "54",
+            goals: "27",
+            assists: "5",
+            achievements: ["Возвращение легенды", "Хет-трики в АПЛ", "Достижение 800+ голов"]
+        },
+        {
+            name: "Аль-Наср",
+            period: "2023 – н.в.",
+            badgeIcon: "💛💙",
+            apps: "67",
+            goals: "60",
+            assists: "15",
+            achievements: ["Рекорды Саудовской лиги", "Лучший бомбардир 2023", "Кубок арабских чемпионов"]
+        }
+    ];
+
+    // Функция рендера списка клубов
+    function renderClubs() {
+        const container = document.getElementById('clubsContainer');
+        if (!container) return;
+
+        let html = '';
+        for (let club of clubsData) {
+            html += `
+                <div class="club-card">
+                    <div class="card-header">
+                        <div class="club-badge">
+                            ${club.badgeIcon}
+                        </div>
+                        <div class="club-name">
+                            <h2>${club.name}</h2>
+                        </div>
+                        <div class="club-period">
+                            <i class="far fa-calendar-alt"></i> ${club.period}
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="stats">
+                            <div class="stat-item">
+                                <div class="stat-number">${club.apps}</div>
+                                <div class="stat-label">Матчи</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">${club.goals}</div>
+                                <div class="stat-label">Голы</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">${club.assists}</div>
+                                <div class="stat-label">Голевые передачи</div>
+                            </div>
+                        </div>
+                        <div class="achievements">
+                            <p><i class="fas fa-award"></i> Ключевые моменты</p>
+                            <ul>
+                                ${club.achievements.map(ach => `<li><i class="fas fa-check-circle"></i> ${ach}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        container.innerHTML = html;
+    }
+
+    // Дополнительно: динамически добавляем дополнительную карьерную статистику (общие цифры)
+    function addExtraGlobalStats() {
+        // Можно добавить общий баннер с суммарной статистикой
+        const timelineDiv = document.querySelector('.timeline');
+        if (!timelineDiv) return;
+        const globalStatsDiv = document.createElement('div');
+        globalStatsDiv.className = 'honors-section';
+        globalStatsDiv.style.marginTop = '2rem';
+        globalStatsDiv.style.background = '#eef2fa';
+        globalStatsDiv.innerHTML = `
+            <div class="honors-title" style="margin-bottom: 0.8rem;">
+                <i class="fas fa-chart-line"></i> ИТОГО ЗА КАРЬЕРУ (клубная статистика)
+            </div>
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 1rem; text-align: center;">
+                <div><span style="font-weight:800; font-size:2rem;" id="totalApps">0</span><br>Матчей</div>
+                <div><span style="font-weight:800; font-size:2rem; color:#d35400;" id="totalGoals">0</span><br>Голов</div>
+                <div><span style="font-weight:800; font-size:2rem;" id="totalAssists">0</span><br>Голевых передач</div>
+                <div><span style="font-weight:800; font-size:2rem;">🏆 34+</span><br>Трофеев (клубные)</div>
+            </div>
+            <div style="margin-top: 12px; font-size:0.8rem; opacity:0.7; text-align:center">*Только официальные матчи, данные собраны на основе клубной карьеры</div>
+        `;
+        timelineDiv.insertAdjacentElement('afterend', globalStatsDiv);
+        
+        // Суммируем цифры из clubsData
+        let sumApps = 0, sumGoals = 0, sumAssists = 0;
+        clubsData.forEach(c => {
+            let appsVal = parseInt(c.apps);
+            let goalsVal = parseInt(c.goals);
+            let assistsVal = parseInt(c.assists);
+            if (!isNaN(appsVal)) sumApps += appsVal;
+            if (!isNaN(goalsVal)) sumGoals += goalsVal;
+            if (!isNaN(assistsVal)) sumAssists += assistsVal;
+        });
+        document.getElementById('totalApps').innerText = sumApps;
+        document.getElementById('totalGoals').innerText = sumGoals;
+        document.getElementById('totalAssists').innerText = sumAssists;
+    }
+
+    // Также, для реализма, добавим интересный факт о карьере
+    function addFunFact() {
+        const footer = document.querySelector('footer');
+        if (footer) {
+            const factDiv = document.createElement('div');
+            factDiv.style.marginTop = '20px';
+            factDiv.style.fontSize = '0.85rem';
+            factDiv.style.background = '#ffffffc9';
+            factDiv.style.padding = '12px 18px';
+            factDiv.style.borderRadius = '60px';
+            factDiv.style.display = 'inline-block';
+            factDiv.style.marginBottom = '15px';
+            factDiv.innerHTML = '<i class="fas fa-lightbulb"></i> Интересно: Криштиану забивал в финалах ЛЧ за «Манчестер Юнайтед» и «Реал Мадрид», а также является единственным игроком, забивавшим в 11 финалах подряд различных турниров!';
+            footer.prepend(factDiv);
+        }
+    }
+
+    // Запуск рендера
+    renderClubs();
+    addExtraGlobalStats();
+    addFunFact();
+</script>
+</body>
+</html>
