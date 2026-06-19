@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Ronaldo GOAT🐐</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<!--<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+								</a>-->
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">меню</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>меню</h2>
+						<ul>
+							<li><a href="index.html">Главная страница</a></li>
+							<li><a href="developments.html">Наша команда</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<!--<li><a href="elements.html">Elements</a></li>-->
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Семья Криштиану Роналду в детстве</h1>
+							
+							<p>Криштиану Роналду родился в бедной семье на острове Мадейра. Его мать, Мария Долореш, работала поваром и уборщицей, чтобы прокормить детей. Отец, Жозе Диниш, был садовником и завхозом в местном футбольном клубе "Андоринья". Семья жила в скромном доме в районе Фуншала, часто испытывая финансовые трудности. Криштиану был четвёртым, не запланированным ребёнком, и его мать всерьёз рассматривала возможность аборта, но в итоге решила оставить малыша.</p>
+							
+							<p>Мария Долореш была главной опорой семьи. Она работала с утра до ночи, чтобы дети не голодали, и старалась дать им всё возможное. Именно она привила Криштиану трудолюбие и настойчивость. Несмотря на тяжёлый быт, она всегда поддерживала сына в его увлечении футболом и верила в его успех. Позже Роналду говорил, что его мать - самый важный человек в его жизни, и он посвящает ей все свои победы.</p>
+							
+							<p>Отец Криштиану, Жозе Диниш, сильно пил из-за тяжёлых воспоминаний о войне в Африке, где он служил. Это создавало напряжённую атмосферу в доме и осложняло отношения в семье. Однако именно Жозе Диниш привёл маленького Криштиану в футбол и записал его в клуб "Андоринья". Он гордился талантом сына, но из-за алкогольной зависимости не мог быть надёжной опорой. Криштиану часто вспоминал, что его отец редко присутствовал на его матчах, и это стало одной из причин его огромной мотивации - он хотел стать лучшим, чтобы отец мог им гордиться.</p>
+							
+							<p>У Криштиану было два старших брата - Уго и Элма, а также старшая сестра Катя. Семья была дружной, несмотря на все трудности. Катя, которая была ближе всех к Криштиану, часто заботилась о нём и поддерживала в детстве. Позже она стала его личным ассистентом и одной из самых близких людей. Роналду всегда подчёркивал, что его семья - это его фундамент, и он сделал всё, чтобы вытащить их из бедности. Сегодня он обеспечивает всех своих родных и часто говорит, что его главная цель в жизни - сделать семью счастливой.</p>
+							
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Хотите увидеть подобное с вашим любимым игроком? Напишите нам!</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button primary">Отправить</a></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Соцсети</h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/Cristiano" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/Cristiano/" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/cristiano/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://www.youtube.com/@cristiano" class="icon brands style2 fa-youtube"><span class="label">YouTube</span></a></li>
+									<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Created by: <a href="developments.html">HotPeppers</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
