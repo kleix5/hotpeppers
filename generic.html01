@@ -17,19 +17,6 @@
 				border-radius: 8px;
 				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 			}
-			
-			/* Стили для текста */
-			.inner p {
-				font-size: 1.1rem;
-				line-height: 1.8;
-				margin-bottom: 1.5rem;
-				text-align: justify;
-			}
-			
-			.inner h1 {
-				color: #e74c3c;
-				font-weight: 700;
-			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -72,8 +59,10 @@
 						<div class="inner">
 							<h1>Детство Криштиану Роналду</h1>
 							
-							<!-- Новая фотография перед первым абзацем -->
+							<!-- Фотография pic18.jpg сразу после заголовка -->
 							<img src="images/pic18.jpg" alt="Криштиану Роналду" class="childhood-image" />
+							
+							
 							
 							<!-- Картинка под заголовком -->
 							<img src="https://i.ytimg.com/vi/-yNALFazC7c/maxresdefault.jpg" alt="Криштиану Роналду в молодости" class="childhood-image" onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0fB3KE_G5ZzRn-_Zt05alNzSAwHZ-lW7SdQ&s'" />
