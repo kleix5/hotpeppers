@@ -17,6 +17,19 @@
 				border-radius: 8px;
 				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 			}
+			
+			/* Стили для текста */
+			.inner p {
+				font-size: 1.1rem;
+				line-height: 1.8;
+				margin-bottom: 1.5rem;
+				text-align: justify;
+			}
+			
+			.inner h1 {
+				color: #e74c3c;
+				font-weight: 700;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -59,8 +72,11 @@
 						<div class="inner">
 							<h1>Детство Криштиану Роналду</h1>
 							
+							<!-- Новая фотография перед первым абзацем -->
+							<img src="images/pic18.jpg" alt="Криштиану Роналду" class="childhood-image" />
+							
 							<!-- Картинка под заголовком -->
-							<img src="https://i.ytimg.com/vi/-yNALFazC7c/maxresdefault.jpg" alt="Криштиану Роналду в молодости" class="childhood-image" />
+							<img src="https://i.ytimg.com/vi/-yNALFazC7c/maxresdefault.jpg" alt="Криштиану Роналду в молодости" class="childhood-image" onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0fB3KE_G5ZzRn-_Zt05alNzSAwHZ-lW7SdQ&s'" />
 							
 							<p>Криштиану Роналду родился 5 февраля 1985 года в бедном районе Фуншала на острове Мадейра. Он был четвёртым, не запланированным ребёнком в семье, и его мать Мария Долореш, работавшая поваром, всерьёз рассматривала возможность аборта. Отец Жозе Диниш был садовником, а позже стал завхозом в местном клубе «Андоринья», но сильно пил из-за тяжёлых воспоминаний о войне в Африке. Несмотря на это, именно он привёл маленького Криштиану в футбол. Интересно, что своё имя он получил в честь тогдашнего президента США Рональда Рейгана, который был любимым актёром его отца.</p>
 							
@@ -89,7 +105,7 @@
 										</div>
 									</div>
 									<ul class="actions">
-										<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button primary">Отправить</a></li>
+										<li><input type="submit" value="Отправить" class="button primary" onclick="alert('Спасибо! Мы свяжемся с вами в ближайшее время.')" /></li>
 									</ul>
 								</form>
 							</section>
@@ -100,7 +116,7 @@
 									<li><a href="https://www.facebook.com/Cristiano/" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
 									<li><a href="https://www.instagram.com/cristiano/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
 									<li><a href="https://www.youtube.com/@cristiano" class="icon brands style2 fa-youtube"><span class="label">YouTube</span></a></li>
-									<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://github.com" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</section>
 							<ul class="copyright">
