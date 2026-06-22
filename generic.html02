@@ -10,7 +10,7 @@
 			/* Стили для фотографии */
 			.ronaldo-image {
 				display: block;
-				max-width: 200px;
+				max-width: 400px;
 				width: 100%;
 				height: auto;
 				margin: 20px auto;
