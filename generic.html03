@@ -10,7 +10,7 @@
 			
 			.childhood-image {
 				display: block;
-				max-width: 800px;
+				max-width: 400px;
 				width: 100%;
 				height: auto;
 				margin: 20px auto;
