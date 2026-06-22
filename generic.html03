@@ -8,7 +8,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 			
-			.family-image {
+			.childhood-image {
 				display: block;
 				max-width: 800px;
 				width: 100%;
@@ -19,11 +19,6 @@
 				transition: transform 0.3s ease;
 			}
 			
-			.family-image:hover {
-				transform: scale(1.02);
-			}
-			
-			}
 		</style>
 	</head>
 	<body class="is-preload">
